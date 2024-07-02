@@ -1,0 +1,22 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*  @ Main Tailwind file for injecting utilities.
+/* ----------------------------------------------------------------------------------------------------- */
+
+body,
+.dark,
+.light {
+    background: #fff0eb !important;
+}
+body,
+.theme-default {
+    --fuse-primary: #fd683e;
+}
+
+.mat-form-field.mat-form-field-appearance-fill.mat-focused:not(
+        .mat-form-field-invalid
+    )
+    .mat-form-field-wrapper
+    .mat-form-field-flex {
+    border-color: #fd683e !important;
+}
+@tailwind utilities;

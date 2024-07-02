@@ -1,0 +1,37 @@
+<div class="flex flex-col flex-auto items-center sm:justify-center min-w-0">
+    <div class="w-full sm:w-auto py-8 px-4 sm:p-12 sm:rounded-2xl sm:bg-card">
+        <div class="w-full max-w-100 sm:w-100 mx-auto sm:mx-0">
+            <div class="text-xl font-semibold leading-6 tracking-tight mb-6">
+                {{restaurantId ? "Update" : "Create"}} Restaurant
+            </div>
+            <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="w-full">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                    <mat-label>Description</mat-label>
+                    <textarea formControlName="description"
+                    matInput
+                    [rows]="3"
+                    matTextareaAutosize></textarea>
+
+                  
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                    <mat-label>Location</mat-label>
+                    <input matInput formControlName="location" />
+                </mat-form-field>
+                <button
+                    class="mat-focus-indicator mt-4 fuse-mat-button-large w-full mat-flat-button mat-button-base mat-primary"
+                    mat-flat-button
+                    type="submit"
+                >
+                    <span> Submit </span>
+                </button>
+
+                <!-- <button mat-button type="submit">Submit</button> -->
+            </form>
+        </div>
+    </div>
+</div>
